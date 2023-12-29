@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap');
+    /* body { 
+      background: #ffffff;
+    }*/
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px;
+    }
+
+    /* .buttonContainer .modifiedButton {
+      flex-basis: 100%;
+    }
+
+    .buttonContainer .modifiedButton:nth-of-type(4),
+    .buttonContainer .modifiedButton:nth-of-type(5) {
+      flex-basis: 50%;
+    } */
+
+    /* .size-large-icononly {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; */
+  /* gap: 8px;
+  padding: 14px 21px; */
+  /* gap: 15px;
+  padding: 9px 18px;
+  position: relative;
+  background-color: rgba(241, 245, 249, 1);
+  border-radius: 16px;
+  border-color: rgba(102, 50, 141, 1);
+  margin-top: 30px;
+}
+
+.size-large-icononly .left-icon-view-box {
+  position: relative;
+  width: 24px;
+  height: 32px;
+}
+
+.size-large-icononly .left-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  left: -8px;
+}
+
+.size-large-icononly .text-box {
+  display: inline-flex;
+  height: 32px;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 0px 2px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.size-large-icononly .text {
+  position: relative;
+  width: fit-content;
+  font-family: "DMSans-Medium", Helvetica;
+  font-weight: 500;
+  color: rgba(102, 50, 141, 1);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-style: normal;
+}
+
+.size-large-icononly{
+  text-shadow: 3px 5px 2px rgb(0 0 0 / 0.4);
+}
+.size-large-icononly:hover{
+  text-shadow: 2px 3px 2px rgb(0 0 0 / 0.4);
+} */
+.glow-on-hover {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(73, 36, 101);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 16px;
+}
+
+.glow-on-hover:active {
+    color:rgb(231, 231, 233)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(32 15 45);
+    left: 0;
+    top: 0;
+    border-radius: 16px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.tempsize-large-icononly {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 8px; */
+  gap: 9px;
+  padding: 6px 16px;
+  position: relative;
+  background-color: rgba(102, 50, 141, 1);
+  border-radius: 16px;
+  border-color: rgba(241, 245, 249, 1);
+  margin: 3px;
+}
+
+.tempsize-large-icononly .templeft-icon-view-box {
+  position: relative;
+  width: 24px;
+  height: 32px;
+}
+
+.tempsize-large-icononly .templeft-icon {
+  position: absolute;
+  width: 33px;
+  height: 24px;
+  top: 3px;
+  left: -9px;
+}
+
+.tempsize-large-icononly .temptext-box {
+  display: inline-flex;
+  height: 32px;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 0px 2px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tempsize-large-icononly .temptext {
+  position: relative;
+  width: fit-content;
+  font-family: "DMSans-Medium", Helvetica;
+  font-weight: 500;
+  color: rgba(241, 245, 249, 1);
+  /* font-size: 16px; */
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-style: normal;
+}
+
+.tempsize-large-icononly{
+  filter: drop-shadow(2px 3px 2px rgb(0 0 0 / 0.4));
+}
+.tempsize-large-icononly:hover{
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+  </style>
+  <div class="buttonContainer">
+    <button id="generalButton" class="tempsize-large-icononly" style="width:100%;background-color: rgb(32 15 45); padding: 10px 19px;">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="help-desk-information-counter-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">General</div></div>
+    </button>
+    <button id="DSAButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="contact-chatting-communication-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">DSA</div></div>
+    </button>
+    <button id="sportButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="sport-faculty-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">Sport</div></div>
+    </button>
+    <button id="libraryButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="library-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">Library</div></div>
+    </button>
+    <button id="admissionButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="help-desk-information-counter-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">Admission</div></div>
+    </button>
+    <button id="examinationButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="library-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">Examination</div></div>
+    </button>
+    <button id="itButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="help-desk-information-counter-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">IT</div></div>
+    </button>
+    <button id="oricButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="help-desk-information-counter-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">ORIC</div></div>
+    </button>
+    <button id="medicalButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="help-desk-information-counter-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">medical</div></div>
+    </button>
+    <button id="financeButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="finance-book-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">Finance</div></div>
+    </button>
+    <button id="scholarshipButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="finance-book-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">Scholarship</div></div>
+    </button>
+    <button id="CCPEButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="contact-phone-talking-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">CCPE</div></div>
+    </button>
+    <button id="QECButton" class="tempsize-large-icononly">
+      <div class="templeft-icon-view-box"><img class="templeft-icon" src="contact-phone-talking-svgrepo-com.svg" /></div>
+      <div class="temptext-box"><div class="temptext">QEC</div></div>
+    </button>
+      <button id="GCCPButton" class="tempsize-large-icononly">
+        <div class="templeft-icon-view-box"><img class="templeft-icon" src="contact-phone-talking-svgrepo-com.svg" /></div>
+        <div class="temptext-box"><div class="temptext">GCCP</div></div>
+      </button>
+      <button id="supportButton" class="tempsize-large-icononly">
+        <div class="templeft-icon-view-box"><img class="templeft-icon" src="contact-phone-talking-svgrepo-com.svg" /></div>
+        <div class="temptext-box"><div class="temptext">Support</div></div>
+      </button>
+    <button id="careerButton" class="glow-on-hover" type="button">Career Guidance!</button>
+    <!-- <button id="careerButton" class="size-large-icononly">
+      <div class="left-icon-view-box"><img class="left-icon" src="annual-report-1.svg" /></div>
+      <div class="text-box"><div class="text">careerButton</div></div>
+    </button> -->
+  </div>
+  
+    <script>
+      // Get the button element by its ID
+      const oricButton = document.getElementById('oricButton');
+  
+      // Add a click event listener to the button
+      oricButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './ORIC.html';
+      });
+      // Get the button element by its ID
+      const GCCPButton = document.getElementById('GCCPButton');
+  
+      // Add a click event listener to the button
+      GCCPButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './GCCP.html';
+      });
+      // Get the button element by its ID
+      const QECButton = document.getElementById('QECButton');
+  
+      // Add a click event listener to the button
+      QECButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './QEC.html';
+      });
+      // Get the button element by its ID
+      const CCPEButton = document.getElementById('CCPEButton');
+  
+      // Add a click event listener to the button
+      CCPEButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './CCPE.html';
+      });
+      // Get the button element by its ID
+      const scholarshipButton = document.getElementById('scholarshipButton');
+  
+      // Add a click event listener to the button
+      scholarshipButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './scholarship.html';
+      });
+      // Get the button element by its ID
+      const medicalButton = document.getElementById('medicalButton');
+  
+      // Add a click event listener to the button
+      medicalButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './medical.html';
+      });
+      // Get the button element by its ID
+      const examinationButton = document.getElementById('examinationButton');
+  
+      // Add a click event listener to the button
+      examinationButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './examination.html';
+      });
+      // Get the button element by its ID
+      const itButton = document.getElementById('itButton');
+  
+      // Add a click event listener to the button
+      itButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './IT.html';
+      });
+      // Get the button element by its ID
+      const generalButton = document.getElementById('generalButton');
+  
+      // Add a click event listener to the button
+      generalButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './general.html';
+      });
+      // Get the button element by its ID
+      const admissionButton = document.getElementById('admissionButton');
+  
+      // Add a click event listener to the button
+      admissionButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './Admission.html';
+      });
+      const supportButton = document.getElementById('supportButton');
+  
+      // Add a click event listener to the button
+      supportButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './support.html';
+      });
+      const financeButton = document.getElementById('financeButton');
+  
+      // Add a click event listener to the button
+      financeButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './finance.html';
+      });
+      const libraryButton = document.getElementById('libraryButton');
+  
+      // Add a click event listener to the button
+      libraryButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './library.html';
+      });
+      const DSAButton = document.getElementById('DSAButton');
+  
+      // Add a click event listener to the button
+      DSAButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './DSA.html';
+      });
+      const sportButton = document.getElementById('sportButton');
+  
+      // Add a click event listener to the button
+      sportButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './sport.html';
+      });
+      const careerButton = document.getElementById('careerButton');
+  
+      // Add a click event listener to the button
+      careerButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './career.html';
+      });
+    </script>
+  </body>
+</html>
