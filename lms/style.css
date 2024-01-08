@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+:root{
+        --color-logoColor: rgba(123, 88, 10, 0.496);
+
+        --color-dark-variant:#677483 ;
+        --color-light-variant:blue ;
+        --color-info-dark:#7d8da1;
+        --color-info-light:#dce1eb;
+        --color-dark:#363949 ;
+        --color-light:rgb(132,139,200,0.18);
+        --color-backgroung:#f6f6f9; 
+
+         --card-border-radius:2rem;
+        --card-border-radius-1:0.4rem;
+        --card-border-radius-2:0.8rem;
+        --card-border-radius-3:1.2rem;
+
+        --card-padding: 1.8rem;
+        --padding-1: 1.2rem;
+
+        --box-shadow:0 2rem 3rem var(--color-light);
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    appearance: 0px;
+    text-decoration: none!important;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: poppins,sans-serif;
+    font-size: 0.8rem;
+    background:#f6f6f9 ;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size:1.8rem ;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.text-muted{
+color:var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+
+
+.aside{
+    /* height: 80vh; */
+    /* background-color: gray; */
+    
+}
+
+.asideTop{
+    
+    background: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-top: 1rem;
+    
+}
+.asideLogo{
+    display: flex;
+    /* gap: 0.8rem; */
+}
+.asideLogo img{
+    width: 2rem;
+    height: 2rem;
+}
+.asideClose{
+    display: none;
+}
+
+/* -------------- SIDEBAR ----------------- */
+
+.aside .sidebar{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    position: relative;
+    top: 1rem;
+     
+}
+
+.aside h3{
+    font-weight: 500;
+}
+
+.fs-4{
+    color: rgba(168, 124, 4, 0.967);
+    font-weight: 600;
+}
+ a {
+    display: flex;
+    color:#7d8da1;
+    /* margin-left: 2rem; */
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+ a span{
+    font-size: 1.6rem;
+}
+ 
+/* .aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width:100%;
+} */
+
+ a.nav-link:active{
+   background-color:#6060622e;
+   color:#6a6c7e2e;
+   margin-left:2rem;
+
+}
+
+.aside .sidebar a::before{
+    
+}

@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.2/examples/sidebars/"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css"
+      integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ------------- --------------------- -->
+
+               <!-- AI chat bot  -->
+               <link
+               rel="stylesheet"
+               href="https://fonts.googleapis.com/icon?family=Material+Icons"
+             />
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+             <!-- AI chat bot end   -->
+
+    <!-- -------------- Style --------------------------- -->
+    <link rel="stylesheet" href="./techCarnot.css" />
+    <style>
+      .right-sidebar {
+        background: #052e6e;
+        position: fixed;
+        border-top-right-radius: 3rem;
+        border-top-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+        border-bottom-left-radius: 3rem;
+        padding: 0;
+        top: 5rem;
+        height: 80%;
+        right: 5px;
+        width: 50px;
+        overflow: hidden;
+        z-index: 1000;
+      }
+
+      .section-bg {
+        background: linear-gradient(
+          96deg,
+          rgb(21 3 57) 0%,
+          rgb(18 8 59) 45%,
+          rgb(20 8 69) 100%
+        );
+        width: 100%;
+        height: 90vh;
+      }
+      .right-sidebar {
+        background: #052e6e;
+      }
+      .main-menu {
+        background: #052e6e;
+      }
+      .borderNavbar {
+        background: #052e6e;
+      }
+
+      /* main menu */
+
+      .main-menu {
+        background: #2162c6;
+        position: fixed;
+        border-top-right-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+        padding: 0;
+        bottom: 31px;
+        height: 92%;
+        left: 0;
+        width: 60px;
+        overflow: hidden;
+        -webkit-transition: width 0.2s linear;
+        transition: width 0.2s linear;
+        -webkit-transform: translateZ(0) scale(1, 1);
+        z-index: 1000;
+      }
+    </style>
+  </head>
+
+  <body class="section-bg">
+
+
+    <style>
+  
+      /*AI chat bot*/
+      #chat-circle {
+       background: #48a9ff;
+       position: fixed;
+       bottom: 12px;
+       right: 15px;
+       width: 45px;
+       height: 45px;
+       border-radius: 50%;
+       color: white;
+       padding: 0px;
+       cursor: pointer;
+       /* box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+       z-index: 1001;
+     }
+     
+     .chat-box {
+       display: none;
+       position: fixed;
+       right: 6px;
+       bottom: 5px;
+       width: 350px;
+       max-width: 85vw;
+       max-height: 100vh;
+       border-radius: 25px;
+       box-shadow: 0px 3px 5px 2px #020a30bf;
+       z-index: 1500;
+     
+     
+     
+       display: none;
+       position: fixed;
+       right: 6px;
+       bottom: 5px;
+       width: 400px;
+       max-width: 90vw;
+       max-height: 100vh;
+       border-radius: 25px;
+       box-shadow: 0px 3px 5px 2px #020a30bf;
+       z-index: 1500;
+     }
+     .chat-box-toggle {
+       float: right;
+       margin-right: 15px;
+       cursor: pointer;
+     }
+     .chat-box-header {
+       background: #48a9ff;
+       height: 60px;
+       border-top-left-radius: 25px;
+       border-top-right-radius: 25px;
+       color: white;
+       text-align: center;
+       font-size: 20px;
+       padding-top: 17px;
+     }
+     .chat-box-body {
+       position: relative;
+       height: 470px !important;
+       overflow: hidden;
+       border-bottom-left-radius: 25px;
+       border-bottom-right-radius: 25px;
+     }
+     
+     @media only screen and (max-width: 767px) {
+       .chat-box {
+         width: 95%;
+         /* right: 24px; */
+         right: 9px;
+         bottom: 2px;
+         max-width: 100vw;
+       }
+       .chat-box-body {
+         height: 657px !important;
+       }
+       .chat-iframe {
+         height: 710px !important;
+       }
+     }
+     /*AI chat bot end*/
+     
+     </style>
+
+
+    <style>
+      /* flip card with */
+      .wrapper {
+        margin-top: 17px;
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+      }
+
+      .wrapper .card {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* padding: 5px; */
+        background: linear-gradient(
+            68deg,
+            rgb(5 11 98 / 86%),
+            rgb(50 4 91 / 0%)
+          ),
+          url(https://i.imgur.com/zwZc83S.png) top center no-repeat;
+        background-size: cover;
+
+        border-radius: 10px;
+        transform: translateX(180deg);
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); */
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+
+      .wrapper:hover > .front-face {
+        transform: rotateX(0deg);
+      }
+
+      .wrapper .card img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+
+      .wrapper .back-face {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transform: rotateX(-180deg);
+        background: #052e6e;
+      }
+
+      .wrapper:hover > .back-face {
+        transform: rotateY(0deg);
+      }
+
+      .wrapper .back-face img {
+        height: 150px;
+        width: 150px;
+        padding: 5px;
+        border-radius: 50%;
+        background: linear-gradient(375deg, #1cc7d0, #2ede98);
+      }
+
+      .wrapper .back-face .info {
+        text-align: center;
+      }
+
+      .back-face .info .title {
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      .back-face ul {
+        display: flex;
+      }
+
+      .back-face ul a {
+        display: block;
+        height: 40px;
+        width: 40px;
+        color: #fff;
+        text-align: center;
+        margin: 0 5px;
+        line-height: 38px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(375deg, #1cc7d0, #2ede98);
+        transition: all 0.5s ease;
+      }
+
+      .back-face ul a:hover {
+        color: #1cc7d0;
+        border-color: #1cc7d0;
+        /* background: linear-gradient(375deg, transparent, transparent); */
+        background-color: rgb(28, 9, 80);
+      }
+
+      .right-sidebar i {
+        position: relative;
+        display: table-cell;
+        width: 50px;
+        height: 57px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .short {
+          width: 100% !important;
+        }
+        .texthide {
+          display: none;
+        }
+        .wrapper {
+          margin-top: 17px;
+          height: 31vh;
+          width: 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          perspective: 1000px;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div class="row">
+        <div class="short col-10 col-md-12 col-lg-12">
+          <!-- START -  yahan sara code aaye ga under ka  -->
+
+          <!-- Carousel -->
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="wrapper">
+                  <div class="card front-face">
+                    <!-- front card start -->
+                    <div class="container p-5 pt-0 mt-3">
+                      <div class="row">
+                        <div class="col-sm-6 p-3 text-white">
+                          <p class="h1" style="font-weight: 900;">
+                            Be a better Programmer - Code. Build & Skills.
+                          </p>
+                          <p style="font-weight: 600;">
+                            We Provide Certification Training Courses with
+                            Placement Support till you get Job
+                          </p>
+                          <p
+                            class="h3 texthide"
+                            style="font-weight: 900; color: #3da16f;"
+                          >
+                            Build Your Skill Ready in 2023
+                          </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4 p-3">
+                          <img
+                            src="https://static.vecteezy.com/system/resources/previews/021/665/927/original/online-education-concept-3d-illustration-video-lectures-and-lessons-on-educational-platform-viewing-webinars-video-chats-with-teachers-e-learning-3d-illustration-png.png"
+                            class="mx-auto d-block"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card back-face">
+                    <img
+                      src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    />
+                    <div class="info">
+                      <div class="title">
+                        CodingLab
+                      </div>
+                      <p>
+                        User interface designer and <br />front-end developer
+                      </p>
+                    </div>
+                    <ul>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- flip card 1 -->
+                <div class="wrapper">
+                  <div class="card front-face">
+                    <img
+                      src="https://cdn-cfpof.nitrocdn.com/BlsuvUouCRMZXlRDnoReLQfXZdugMQtC/assets/images/optimized/rev-bd8b979/teachcomputerscience.com/wp-content/uploads/2019/08/015-coding-language.png"
+                    />
+                  </div>
+                  <div class="card back-face">
+                    <img
+                      src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    />
+                    <div class="info">
+                      <div class="title">
+                        CodingLab
+                      </div>
+                      <p>
+                        User interface designer and <br />front-end developer
+                      </p>
+                    </div>
+                    <ul>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </ul>
+                  </div>
+                </div>
+                <!-- flip card 1 - end -->
+              </div>
+              <div class="carousel-item">
+                <div class="wrapper">
+                  <div class="card front-face">
+                    <img
+                      src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    />
+                  </div>
+                  <div class="card back-face">
+                    <img
+                      src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    />
+                    <div class="info">
+                      <div class="title">
+                        CodingLab
+                      </div>
+                      <p>
+                        User interface designer and <br />front-end developer
+                      </p>
+                    </div>
+                    <ul>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <!-- Carousel end -->
+
+          <style>
+            .main {
+              margin-top: 50px;
+              color: #111e6c;
+            }
+            .main:before {
+              bottom: 0;
+              left: 0;
+              right: 0;
+              top: 0;
+              opacity: 0.2;
+              filter: alpha(opacity=90);
+            }
+            .main-text {
+              color: #111e6c;
+            }
+            .btn-circle,
+            #to-top {
+              /* border-radius: 50%;
+     background: #111e6c;
+     padding: 6px;
+     font-size: 11px;
+     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+     color: #fff;
+     text-align: center;
+     font-weight: 600;
+     text-transform: uppercase; */
+            }
+            /*    
+   .c2a-btn {
+     margin: 5px auto 0;
+     margin: 0.5rem auto 0;
+   } */
+
+            .btn-default {
+              color: #fff;
+              background-color: #111e6c;
+              border-color: #111e6c;
+              transition: all 1s ease;
+            }
+
+            .btn-default:hover {
+              color: #111e6c;
+              background-color: #fff;
+              border-color: #fff;
+              transition: all 1s ease;
+            }
+            .btn-group-lg > .btn,
+            .btn-lg {
+              padding: 20px 55px 20px 8px;
+              font-size: 18px;
+              line-height: 3.1;
+              border-radius: 30px;
+            }
+
+            .btn-group .btn-or {
+              top: 50%;
+              left: 50%;
+              position: absolute;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              z-index: 99;
+              box-shadow: 0;
+              /* border: 2px solid #fff; */
+            }
+
+            .imgquery {
+              width: 117px;
+            }
+
+            @media only screen and (max-width: 767px) {
+              .imgquery {
+                width: 35px;
+              }
+              .main {
+                margin-top: 5px;
+              }
+
+              .btn-group-lg > .btn,
+              .btn-lg {
+                padding: 20px 40px 20px 8px;
+                font-size: 12px;
+                line-height: 1.9;
+                border-radius: 14px;
+              }
+            }
+          </style>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="main">
+                <div class="text-center main-text">
+                  <div class="c2a-btn footer-c2a-btn">
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Call to action"
+                    >
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        onclick="openPopup('pop-up-1', 'https://paiza.io/projects/e/TH1gqF4Bw6WGRSfPgBNz-A?theme=tomorrow_night_blue')"
+                        href="#"
+                        >Code Editor</a
+                      >
+                      <span class="btn-circle btn-or">
+                        <img
+                          class="imgquery"
+                          src="https://i.imgur.com/1socvit.png"
+                          alt=""
+                        />
+                      </span>
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-10', 'commingsoon.html')"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="main">
+                <div class="text-center main-text">
+                  <div class="c2a-btn footer-c2a-btn">
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Call to action"
+                    >
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-2', 'https://paiza.io/projects/e/ybPFoHq8IkTBesvjQPO8nA?theme=tomorrow_night_blue')"
+                      >
+                        Code Editor</a
+                      >
+                      <span class="btn-circle btn-or">
+                        <img
+                          class="imgquery"
+                          src="https://i.imgur.com/q3bHGJe.png"
+                          alt=""
+                        />
+                      </span>
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-10', 'commingsoon.html')"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="main">
+                <div class="text-center main-text">
+                  <div class="c2a-btn footer-c2a-btn">
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Call to action"
+                    >
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-3', 'https://paiza.io/projects/e/7lCdNcYmFSb3Yy5aNBYmpA?theme=tomorrow_night_blue')"
+                        >Code Editor</a
+                      >
+                      <span class="btn-circle btn-or">
+                        <img
+                          class="imgquery"
+                          src="https://i.imgur.com/OuMOGEw.png"
+                          alt=""
+                        />
+                      </span>
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-10', 'commingsoon.html')"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="main">
+                <div class="text-center main-text">
+                  <div class="c2a-btn footer-c2a-btn">
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Call to action"
+                    >
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-4', 'https://paiza.io/projects/e/L8FO2ZBrycoBrWk2CatAew?theme=tomorrow_night_blue')"
+                        >Code Editor</a
+                      >
+                      <span class="btn-circle btn-or">
+                        <img
+                          class="imgquery"
+                          src="https://i.imgur.com/sRl1CD4.png"
+                          alt=""
+                        />
+                      </span>
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-10', 'commingsoon.html')"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="main">
+                <div class="text-center main-text">
+                  <div class="c2a-btn footer-c2a-btn">
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Call to action"
+                    >
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-5', 'https://paiza.io/projects/e/n5FhiQMdTE_mTnL_DUIRtw?theme=tomorrow_night_blue')"
+                        >Code Editor</a
+                      >
+                      <span class="btn-circle btn-or">
+                        <img
+                          class="imgquery"
+                          src="https://i.imgur.com/YYu3Pnx.png"
+                          alt=""
+                        />
+                      </span>
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-10', 'commingsoon.html')"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="main">
+                <div class="text-center main-text">
+                  <div class="c2a-btn footer-c2a-btn">
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Call to action"
+                    >
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-6', 'https://paiza.io/projects/e/OSkLUJxMlGm-CZoCm9NbLg?theme=tomorrow_night_blue')"
+                        >Code Editor</a
+                      >
+                      <span class="btn-circle btn-or">
+                        <img
+                          class="imgquery"
+                          src="https://i.imgur.com/APV3DNw.png"
+                          alt=""
+                        />
+                      </span>
+                      <a
+                        type="button"
+                        class="btn btn-default btn-lg"
+                        href="#"
+                        onclick="openPopup('pop-up-10', 'commingsoon.html')"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- END - yahan sara code aaye ga under ka  -->
+        </div>
+      </div>
+    </div>
+
+    <nav class="right-sidebar">
+      <ul>
+        <li>
+          <a
+            href="#"
+            onclick="openPopup('pop-up-1', 'https://paiza.io/projects/e/TH1gqF4Bw6WGRSfPgBNz-A?theme=tomorrow_night_blue')"
+          >
+            <!-- <i class="fa fa-chalkboard-user fa-2x"></i> -->
+            <i class="fa fa-2x">
+              <img
+                src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+                width="33px"
+                alt=""
+              />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="openPopup('pop-up-2', 'https://paiza.io/projects/e/ybPFoHq8IkTBesvjQPO8nA?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/8217Lo3.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a
+            href="#"
+            onclick="openPopup('pop-up-3', 'https://paiza.io/projects/e/7lCdNcYmFSb3Yy5aNBYmpA?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/vjSwUtH.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="openPopup('pop-up-4', 'https://paiza.io/projects/e/L8FO2ZBrycoBrWk2CatAew?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/lqSLKG5.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="openPopup('pop-up-5', 'https://paiza.io/projects/e/n5FhiQMdTE_mTnL_DUIRtw?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/0lLOn0D.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a
+            href="#"
+            onclick="openPopup('pop-up-6', 'https://paiza.io/projects/e/OSkLUJxMlGm-CZoCm9NbLg?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/P5lubN8.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+
+        <li class="has-subnav">
+          <a
+            href="#"
+            onclick="openPopup('pop-up-7', 'https://paiza.io/projects/e/Bk-SICVTv-7nWYHMO7gobA?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img
+                src="https://dormoshe.io/images/newsletters/badges/kotlin.png"
+                width="33px"
+                alt=""
+              />
+            </i>
+          </a>
+        </li>
+
+        <li class="has-subnav">
+          <a
+            href="#"
+            onclick="openPopup('pop-up-8', 'https://paiza.io/projects/e/WRKTvx6D1RTrtoRvZEofhA?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/919/919833.png"
+                width="33px"
+                alt=""
+              />
+            </i>
+          </a>
+        </li>
+
+        <li class="has-subnav">
+          <a
+            href="#"
+            onclick="openPopup('pop-up-9', 'https://paiza.io/projects/e/ppD9JsAySHtW7jxscorixg?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/UXu67Ew.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+
+        <li class="has-subnav">
+          <a
+            href="#"
+            onclick="openPopup('pop-up-10', 'https://paiza.io/projects/e/PU5SUN0o1Yn0d1uQiBeeGA?theme=tomorrow_night_blue')"
+          >
+            <i class="fa fa-2x">
+              <img src="https://i.imgur.com/Wz59cUN.png" width="33px" alt="" />
+            </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="popup-container">
+      <div id="popup-content">
+        <iframe
+          id="popup-iframe"
+          style="
+            width: 100%;
+            border-radius: 20px;
+            height: 110%;
+            margin-top: -21px;
+          "
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+
+    <nav class="main-menu" style="background-color: #052e6e;">
+      <ul>
+        <li style="padding-top: 24px; padding-bottom: 30px;">
+          <a href="./techCarnot.html">
+            <img
+              src="techcarnot1.png"
+              style="padding-left: 7.5px;"
+              height="45px"
+              alt=""
+            />
+            <span class="nav-text">
+              &nbsp;&nbsp;
+              <img src="techcarnot2.png" height="29px" alt="" />
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./techCarnot.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span class="nav-text">
+              Back
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="./codeEditor.html">
+            <i class="fa-solid">
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/visual-studio-code-logo-black-and-white.png"
+                width="20px"
+                alt=""
+              />
+            </i>
+            <span class="nav-text">
+              Code Editor
+            </span>
+          </a>
+        </li>
+
+        <li class="has-subnav">
+          <a href="./electronicLab.html">
+            <i class="fa">
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/arduino-logo-black-and-white.png"
+                width="20px"
+                alt=""
+              />
+            </i>
+            <span class="nav-text">
+              Electronic Lab
+
+              <!-- Simulation Board -->
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./audiobook.html">
+            <i class="fa">
+              <img
+                src="https://www.nicepng.com/png/full/119-1199109_reversetune-com-audio-wave-white-icon-png.png"
+                width="20px"
+                alt=""
+              />
+            </i>
+            <span class="nav-text">
+              AudioBook
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="./webDevelopment.html">
+            <i class="fa fa-cogs fa-2x"></i>
+            <!-- <i class="fa-solid fa-gear-complex-code"></i> -->
+            <span class="nav-text">
+              Web Development Tool
+            </span>
+          </a>
+        </li>
+
+        <li class="has-subnav">
+          <a href="./codeVisualisation.html">
+            <!-- <i class="fa-light fa-screen-users"></i> -->
+            <i class="fa-solid fa-laptop-code"></i>
+            <span class="nav-text">
+              Code Visulization
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      function test() {
+        console.log("test passes");
+      }
+
+      // ----------------- Onclick Buttons --------------------
+      let singleSrc = (id, src) => {
+        console.log(id);
+        console.log(src);
+        document.querySelector(
+          id
+        ).innerHTML = `<iframe src=${src}  frameborder="0"></iframe>`;
+
+        // Close the dropdown menu
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+        dropdownMenu.classList.remove("show");
+      };
+
+      let doubleSrc = (id, src1, src2) => {
+        console.log(id);
+        console.log(src1);
+        console.log(src2);
+        document.querySelector(id).innerHTML = `<div class="aside-bar mb-2">
+                                                        <div class="portion-60">
+                                                            <iframe style="height:85vh!important; pdding-top:53px;" src=${src1} frameborder="0"></iframe>
+                                                        </div>
+                                                        <div class="portion-40">
+                                                            <button class="rhombus" onclick="toggleCollapse()">
+                                                               Open Full Screen
+                                                            </button>
+                                                            <iframe style="height:85vh!important;" src=${src2} frameborder="0"></iframe>
+                                                        </div>
+                                                    </div>`;
+      };
+
+      // ----------------- SIdebar Icon -----------------------
+
+      function toggleCollapse() {
+        var asideBar = document.querySelector(".aside-bar");
+        asideBar.classList.toggle("collapsed");
+      }
+
+      // ----------------- Onclick Icons Right Bar --------------------
+
+      function openPopup(popupId, srcUrl) {
+        const popupContainer = document.getElementById("popup-container");
+        const popupIframe = document.getElementById("popup-iframe");
+
+        popupIframe.src = srcUrl;
+        popupContainer.classList.add("show");
+      }
+
+      function closePopup() {
+        const popupContainer = document.getElementById("popup-container");
+        const popupIframe = document.getElementById("popup-iframe");
+
+        popupIframe.src = "";
+        popupContainer.classList.remove("show");
+      }
+
+      const popupContainer = document.getElementById("popup-container");
+      popupContainer.addEventListener("click", function (event) {
+        if (event.target === this) {
+          closePopup();
+        }
+      });
+    </script>
+
+
+
+
+
+<div id="chat-circle" class="btn btn-raised">
+  <i class="material-icons">
+    <img
+      src="https://cdn3d.iconscout.com/3d/premium/thumb/chatbot-8113743-6497271.png"
+      width="55px"
+      alt=""
+    />
+  </i>
+</div>
+
+
+<div class="chat-box">
+  <div class="chat-box-header">
+    <!-- <img height="30px" src="assets/img/chat-logo.png" alt=""> -->
+    <img height="23px" src="https://i.imgur.com/MQy8c8M.png" alt="" />
+    <!-- <p><center>Simulation Board Assistant</center></p> -->
+    <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+  </div>
+  <div class="chat-box-body">
+    <div>
+      
+      <style>
+        .chat-iframe{
+          @media only screen and (max-width: 600px) {
+          width: 106% !important;
+          }
+        }
+      </style>
+      <iframe
+        class="chat-iframe"
+        style="
+          margin-left: -8px;
+          margin-top: -50px;
+          position: bottom;
+          height: 570px;
+          width: 114.5%;
+        "
+        src="https://app.humata.ai/ask/file/d6c3d89d-62f7-4179-92b7-2f331bd1ade6?share_link=41690a2d-74d2-4df1-8b38-248aaac6e493"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $("#chat-circle").click(function () {
+      $("#chat-circle").toggle("scale");
+      $(".chat-box").toggle("scale");
+    });
+
+    $(".chat-box-toggle").click(function () {
+      $("#chat-circle").toggle("scale");
+      $(".chat-box").toggle("scale");
+    });
+  });
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

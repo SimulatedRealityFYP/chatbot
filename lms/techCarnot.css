@@ -1,0 +1,1017 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+/* ----------- Boader Navbar ---------------- */
+
+.container-border{
+width: 93%;
+margin:0 auto;
+
+}
+
+.borderNavbar{
+  background-color: #222A35;
+  border-radius: 20px;
+  padding: 0 10px 0 10px;
+  /* height: 50px; */
+}
+
+/* ----------- logo ---------------- */
+.img-fluid{
+  width: 200px;
+  height: 30px;
+  /* margin-top: 0.8rem;
+  margin-left: .3rem ; */
+}
+
+.section-bg{
+  background-color: #0E2126;
+  width: 100%;
+  height: 90vh;
+ }
+
+/* --------------- Navbar ---------------  */
+
+.navWidth{
+  width: 30%;
+}
+
+.custom-toggler {
+  display: inline-block;
+  /* width: 30px;
+  height: 30px; */
+  border: 4px solid #2162C6;
+  border-radius: 50%;
+ margin-top: -5px;
+}
+/* ul.dropdown-menu{
+  background-color: #222A35;
+  text-align: center;
+  color: aliceblue;
+} */
+/* li:hover{
+  background-color:#0E2126;
+  color: white;
+  border-radius: 10px;
+} */
+
+/* --------------hr--------------------------- */
+
+.container-hr{
+  display: flex;
+  justify-content: center; 
+}
+
+.hr-center{
+  width: 45%;
+  border: 1px solid #7c98c5;
+}
+
+
+/* ------------------ Sidebar(main-menu) --------------------- */
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.main-menu i {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#2162C6;
+/* border-right:1px solid #e5e5e5; */
+position:fixed;
+border-top-right-radius: 3rem;
+border-bottom-right-radius: 3rem;
+padding: 0;
+bottom:0;
+height:86.5%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width 0.2s linear;
+transition:width 0.2s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+/* z-index:1000; */
+z-index: 800!important;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#fff;
+ font-family: arial;
+ font-size: 1.1rem;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+height: 2.8rem;
+transition: all 300ms ease;  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+
+.main-menu a:hover{
+text-decoration:none;
+margin-left:1rem;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#1a1044;
+border-radius: 15px 3px 3px 15px;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+/* ------------------- Right SIde Bar ---------------------- */
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+            
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+  font-size: 2em;
+}
+
+.right-sidebar i {
+  position: relative;
+  display: table-cell;
+  width: 50px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.right-sidebar {
+  background: #2162C6;
+  position: fixed;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  padding: 0;
+  top: 5rem;
+  height: 80%;
+  right: 0; /* Modified: Changed from "left: 0;" to "right: 0;" */
+  width: 50px;
+  overflow: hidden;
+  /* -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+  -webkit-transform: translateZ(0) scale(1, 1); */
+  z-index: 1000;
+}
+
+.right-sidebar>ul {
+  margin: 7px 0;
+}
+
+.right-sidebar li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.right-sidebar li>a {
+  position: static;
+  display: table;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  color: #fff;
+  font-family: arial;
+  font-size: 1.1rem;
+  text-decoration: none;
+  /* -webkit-transform: translateZ(0) scale(1, 1); */
+  /* -webkit-transition: all .1s linear; */
+  /* transition: all .1s linear; */
+  height: 2.8rem;
+  /* transition: all 300ms ease; */
+}
+
+.right-sidebar .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.right-sidebar .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+/* .right-sidebar a:hover,
+a:focus {
+  text-decoration: none;
+  margin-right: 1rem; 
+   Modified: Changed from "margin-left: 1rem;" to "margin-right: 1rem;"
+ }  */
+
+        /* Sidebar styles (existing styles) */
+
+        /* .right-sidebar {
+          float: none;
+      } */
+
+      .right-sidebar ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+      }
+
+      .right-sidebar ul li {
+          padding: 0px;
+      }
+
+      /* Popup styles */
+
+      #popup-container {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          z-index: 999;
+      }
+
+      #popup-content {
+          width: 90%;
+          height: 90%;
+          margin: auto;
+          background-color: rgb(0,36,81);
+          border-radius: 10px;
+          padding: 0px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          overflow: hidden;
+      }
+
+      #popup-container.show {
+          display: block;
+      }
+
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.right-sidebar li:hover>a,
+nav.right-sidebar li.active>a,
+.dropdown-menu>li>a:hover,
+/* .dropdown-menu>li>a:focus, */
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+/* .dropdown-menu>.active>a:focus, */
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+  color: #fff;
+  background-color: rgb(0,36,81);
+}
+
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+/* --------- folder ------------ */
+
+.myCLassHeading{
+  color: #2162C6;
+  margin-left: 3.5rem;
+}
+.folder-heading{
+  position: absolute!important;
+  left: 50px!important;
+  top: -12px!important;
+}
+
+.ffolder{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.ffolder.big:hover{
+  background-color: #4b8def;
+  color:#2162C6;
+}
+.ffolder.big{
+  margin-top:2.5rem;
+  width: 15rem;
+  height: 8rem;
+  border-radius: 0px 24px 24px 24px;
+  margin-left: 4rem;
+}
+
+/* --------- profile picture-------------- */
+.profile-pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.profile-pictures img {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0.2rem;
+}
+/* ----------------End profile picture---------- */
+.ffolder:before{
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.ffolder:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.ffolder.big:before{
+  top:-24px;
+  left: 0;
+  width: 96px;
+  height: 24px;
+  border-radius: 24px 0px 0px 0px;
+}
+
+.ffolder.big:after{
+  top:-48px;
+  left: 72px;
+  border: 24px solid transparent;
+  
+}
+
+
+
+.ffolder span, .ffolder i{
+  position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.ffolder span{
+  font-size: 15px;
+  padding: 0px 8px;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+.ffolder h6{
+  color: white;
+}
+/* .ffolder h6:hover{
+  color: #2162C6;
+} */
+
+
+.ffolder.big i{ font-size: 53px;}
+
+
+   /*Available colors*/
+.ffolder.cyan{ background-color: #2162C6;}
+.ffolder.cyan:before, .ffolder.cyan span{ background-color: #1a2d49;}
+.ffolder.cyan:after{ border-bottom-color: #2162C6;}
+.ffolder.cyan span{color: #FFFFFF;}
+.ffolder.cyan i{color: #06BAEE;}
+/* .ffolder.cyan:hover{background-color:white;} */
+
+
+
+/* ----------ClassMate Profile -------------------- */
+.my-container {
+ 
+  margin-top: 1rem;
+  margin-left: 5rem;
+   
+}
+.profilHeading{
+  color: white;
+}
+
+.bg-profileborder{
+  background-color: rgb(241, 240, 240);
+  height: 40px;
+  border-top-left-radius:20px ;
+  border-top-right-radius:20px ;
+}
+.bg-profileCustome{
+  
+  background-color: #032545;
+  border: 1px solid white;
+  border-bottom-left-radius:20px ;
+  border-bottom-right-radius:20px ;
+  color: white;
+}
+
+
+/* .image-wrapper{
+  
+  margin:1rem 1rem 3rem 1rem;
+
+  
+} */
+
+.img-thumbnail {
+  
+  position: relative;
+  width: 97px;
+  height: 97px;
+  margin: .5rem;
+  border-radius: 60px;
+  
+}
+.name-thumbnail{
+  margin-left: 2rem;
+}
+
+/* ---------- ENd ClassMate Profile -------------------- */
+
+/* ------------- Notification ------------------------ */
+.notificationHeading{
+ color: #2162C6;
+}
+
+.notification-bar {
+  background-color:rgb(23, 44, 69); 
+  color: white;
+  border-radius: 100px; 
+  padding: 15px; 
+  margin-bottom: 15px;
+}
+
+.notification-container{
+  margin-left: 4rem;
+}
+
+/* -------------End Notification ------------------------ */
+
+/* ----------------- Message ----------------------------- */
+body{
+  background-color: rgb(23, 44, 69);
+  margin-top:20px;
+}
+.card {
+  background: #222A35;
+  color: white;
+  transition: .5s;
+  border: 0;
+  margin-bottom: 30px;
+  border-radius: .55rem;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.chat-app .people-list {
+  width: 280px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  z-index: 7
+  
+}
+.input-group-text{
+  height: 40px;
+}
+
+.chat-app .chat {
+  margin-left: 280px;
+  border-left: 1px solid #2162C6
+}
+
+.people-list {
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s
+  
+}
+
+.people-list .chat-list li {
+  padding: 10px 15px;
+  list-style: none;
+  border-radius: 3px
+}
+
+.people-list .chat-list li:hover {
+  background: #2162C6;
+  cursor: pointer
+}
+
+.people-list .chat-list li.active {
+  background: #2162C6;
+}
+
+.people-list .chat-list li .name {
+  font-size: 15px
+}
+
+.people-list .chat-list img {
+  width: 45px;
+  border-radius: 50%
+}
+
+.people-list img {
+  float: left;
+  border-radius: 50%
+}
+
+.people-list .about {
+  float: left;
+  padding-left: 8px
+}
+
+.people-list .status {
+  color: #fdfdfd;
+  font-size: 13px
+}
+
+.chat .chat-header {
+  padding: 15px 20px;
+  border-bottom: 2px solid #2162C6;
+}
+
+.chat .chat-header img {
+  float: left;
+  border-radius: 40px;
+  width: 40px
+}
+
+.chat .chat-header .chat-about {
+  float: left;
+  padding-left: 10px
+}
+
+.chat .chat-history {
+  padding: 20px;
+  border-bottom: 2px solid #2162C6
+}
+
+.chat .chat-history ul {
+  padding: 0
+}
+
+.chat .chat-history ul li {
+  list-style: none;
+  margin-bottom: 30px
+}
+
+.chat .chat-history ul li:last-child {
+  margin-bottom: 0px
+}
+
+.chat .chat-history .message-data {
+  margin-bottom: 15px
+}
+
+.chat .chat-history .message-data img {
+  border-radius: 40px;
+  width: 40px
+}
+
+.chat .chat-history .message-data-time {
+  color: #abacad;
+  padding-left: 6px
+}
+
+.chat .chat-history .message {
+  color: #fff;
+  padding: 18px 20px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  display: inline-block;
+  position: relative
+}
+
+.chat .chat-history .message:after {
+  bottom: 100%;
+  left: 7%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #2162c6;
+  border-width: 10px;
+  margin-left: -10px
+}
+
+.chat .chat-history .my-message {
+  background: #2162c6;
+}
+
+.chat .chat-history .my-message:after {
+  bottom: 100%;
+  left: 30px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #2162c6;
+  border-width: 10px;
+  margin-left: -10px
+}
+
+.chat .chat-history .other-message {
+  background: #2162c6;
+  text-align: right
+}
+
+.chat .chat-history .other-message:after {
+  border-bottom-color: #2162c6;;
+  left: 93%
+}
+
+.chat .chat-message {
+  padding: 20px;
+}
+
+.online,
+.offline,
+.me {
+  margin-right: 2px;
+  font-size: 8px;
+  vertical-align: middle
+}
+
+.online {
+  color: #86c541
+}
+
+.offline {
+  color: #e47297
+}
+
+.me {
+  color: #1d8ecd
+}
+
+.float-right {
+  float: right
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-app .people-list {
+      height: 465px;
+      width: 100%;
+      overflow-x: auto;
+      background: #2162c6;
+      left: -400px;
+      display: none
+  }
+  .chat-app .people-list.open {
+      left: 0
+  }
+  .chat-app .chat {
+      margin: 0
+  }
+  .chat-app .chat .chat-header {
+      border-radius: 0.55rem 0.55rem 0 0
+  }
+  .chat-app .chat-history {
+      height: 300px;
+      overflow-x: auto
+  }
+
+  #popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 107%;
+    height: 102%;
+    background-color: transparent;
+    z-index: 999;
+    margin-left: -12px;
+    margin-top: -10px;
+}
+
+.right-sidebar {
+  z-index: 800 !important;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .chat-app .chat-list {
+      height: 650px;
+      overflow-x: auto
+  }
+  .chat-app .chat-history {
+      height: 600px;
+      overflow-x: auto
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .chat-app .chat-list {
+      height: 480px;
+      overflow-x: auto
+  }
+  .chat-app .chat-history {
+      height: calc(100vh - 350px);
+      overflow-x: auto
+  }
+}
+
+/* -----------------End Message ----------------------------- */
+
+/* ---------- BackPack -------------------- */
+.backPack-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: 4rem;
+   
+}
+.backPackHeading{
+  color: white;
+}
+
+.bg-backPackBorder{
+  background-color: rgb(241, 240, 240);
+  height: 40px;
+  width: 100%;
+  margin-top: 1rem;
+}
+.bg-backPackCustome{
+  background-color: #032545;
+  border: 1px solid white;
+  
+}
+
+.backPack-bar {
+  background-color:rgb(23, 44, 69); 
+  color: white;
+  border-radius: 10px; 
+  padding: 10px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image-wrapper{
+  margin:1rem 1rem 3rem 1rem;
+  
+}
+
+
+
+/* ---------- ENd Backpack -------------------- */
+
+/* --------------- Accordion Start------------------------ */
+/* .accordion {
+  margin-top: -18px;
+  margin-bottom: 10px;
+} */
+
+.accordion-header {
+  background-color: #113d67;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* .accordion-content {
+  display: none;
+  padding: 10px;
+  color: white;
+  width: 100%;
+}
+
+.accordion-content.show {
+  display: block;
+
+} */
+
+/* --------------- Accordion ENd------------------------ */
+
+
+/* ------------------- Code Editor Start---------------------------- */
+.codeEditor{
+  width: 100%;
+  height: 64vh;
+}
+
+.codeEditor iframe{
+  width: 100%;
+  height: inherit;
+}
+
+/* ------------------- Code Editor End---------------------------- */
+
+/* ------------------- Electronic Lab Start---------------------------- */
+
+.electronicLab{
+  width: 100%;
+  height: 64vh;
+}
+
+.electronicLab iframe{
+  width: 100%;
+  height: inherit;
+}
+
+/* ------------------- Electronic Lab End---------------------------- */
+
+
+
+/* -------------- Code Visualization ---------------------- */
+
+.accordion-searchBar {
+  /* position: fixed; */
+  /* top: 2rem; */
+  
+  background-color:#113d67;
+  border: 5px solid #113d67;
+  color: black;
+  padding-left: 10px;
+  border-radius: 10px;
+  /* width: 95%; */
+  height: 41px;
+  cursor: pointer;
+  /* margin-bottom: 10px; */
+}
+
+/* -------------- Code Visualization ---------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.screenshort{
+  width: 100%;
+  height: 100vh;
+  /* margin-top: 0.8rem; */
+  /* margin-left: .3rem ; */
+}
+
+
+
+
+
+
+
+
+
+
+

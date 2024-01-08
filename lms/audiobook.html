@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css"
+        integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ------------- --------------------- -->
+
+    <!-- -------------- Style --------------------------- -->
+    <link rel="stylesheet" href="./techCarnot.css">
+
+
+<!-- audio book link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gsap/1.19.1/TweenMax.min.js"></script>
+
+<style>
+    .right-sidebar {
+    background: #052e6e;  
+    position: fixed;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    padding: 0;
+    top: 5rem;
+    height: 80%;
+    right: 5px;
+    width: 50px;
+    overflow: hidden;
+    z-index: 1000;
+    }
+
+    .section-bg {
+    background: linear-gradient(96deg, rgb(21 3 57) 0%, rgb(18 8 59) 45%, rgb(20 8 69) 100%);
+    width: 100%;
+    height: 90vh;
+    }
+    .right-sidebar {
+    background: #052e6e;
+    }
+    .main-menu {
+    background: #052e6e;
+    }
+    .borderNavbar{
+    background: #052e6e; 
+    }
+
+    /* main menu */
+
+    .main-menu {
+background:#2162C6;
+position:fixed;
+border-top-right-radius: 3rem;
+border-bottom-right-radius: 3rem;
+padding: 0;
+bottom:31px;
+height:92%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width 0.2s linear;
+transition:width 0.2s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+
+.right-sidebar i {
+    position: relative;
+    display: table-cell;
+    width: 50px;
+    height: 81px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+
+
+  /* flip card with */
+  .wrapper {
+    top: 30px;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .wrapper .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* padding: 5px; */
+    background: #1A8FAB;
+  
+    
+    border-radius: 15px;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  
+  .wrapper:hover>.front-face {
+    transform: rotateY(-180deg);
+  }
+  
+  .wrapper .card img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: contain; */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .wrapper .back-face {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: rotateY(180deg);
+  }
+  
+  .wrapper:hover>.back-face {
+    transform: rotateY(0deg);
+  }
+  
+  .wrapper .back-face img {
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  }
+  
+  .wrapper .back-face .info {
+    text-align: center;
+  }
+  
+  .back-face .info .title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  
+  .back-face ul {
+    display: flex;
+  }
+  
+  .back-face ul a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    margin: 0 5px;
+    line-height: 38px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+    transition: all 0.5s ease;
+  }
+  
+  .back-face ul a:hover {
+    color: #1cc7d0;
+    border-color: #1cc7d0;
+    background: linear-gradient(375deg, transparent, transparent);
+  }
+  
+  
+  /* flip card for services  */
+  
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+  /* audio slider css */
+
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+
+.slider-wrap {
+    height: 100%;
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    left: 50px;
+    top: 50px;
+}
+
+/* .slider-item {
+    width: 704px;
+    padding: 20px 0 25px 30px;
+    border-radius: 10px;
+    background-color: #194e8b;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    opacity: 0;
+    z-index: 0;
+    box-shadow: 0 4px 9px #5959f0;
+    position: absolute;
+    left: 0;
+    top: 70px;
+} */
+
+.slider-item {
+    width: 702px;
+    padding: 12px 0 12px 13px; 
+    /* 12px 0 35px 30px; */
+    
+    border-radius: 172px;
+    background-color: #194e8b;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    opacity: 0;
+    z-index: 0;
+    box-shadow: 0 4px 9px #5959f0;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+/* .animation-card_image {
+    max-width: 60px;
+    max-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 9px rgba(241, 241, 244, 0.72);
+    background-color: #ffffff;
+} */
+
+.animation-card_image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* .animation-card_image img {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    object-fit: cover;
+} */
+
+
+
+.animation-card_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 9px rgb(44 145 187 / 72%);
+}
+
+.animation-card_content {
+    width: 100%;
+    max-width: 374px;
+    margin-left: 26px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.animation-card_content_title {
+    color: #cce0f2;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.18px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.animation-card_content_description {
+    color: #61b1f7;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 10px 0 0 0;
+}
+
+.animation-card_content_city {
+    font-size: 11px;
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #696d74;
+}
+
+
+@media screen and (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+            .slider-item {
+                width: 75%;
+                margin: 0;
+                padding: 15px;
+                margin-left: -15px;
+            }
+
+            
+
+
+.slider {
+    position: relative;
+    width: 92%;
+    left: 43px;
+    top: 0px;
+}
+
+            .animation-card_content_title {
+                font-size: 13px;
+            }
+
+            .animation-card_content_description {
+                font-size: 13px;
+            }
+
+            .animation-card_content_city {
+                font-size: 11px;
+            }
+            .animation-card_content_description{
+                display: none;
+            }
+            .animation-card_image img {
+                display: none;
+        }
+        .scroll_btn{
+            font-size: 11px;
+        }
+        .scp_btn{
+            display: none;
+        }
+    }
+
+  
+  </style>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</head>
+
+
+<body class="section-bg">
+
+
+
+
+
+
+    <div class="container">     
+
+              <!-- ======= Features Section ======= -->
+              <section id="features" class="features">
+
+                <div class="container" data-aos="fade-up">
+                  <div class="row">
+          
+                    <div class="col-lg-4">
+                       
+                        <!-- Carousel -->
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                        
+                          <!-- Indicators/dots -->
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                          </div>
+                          
+                          <!-- The slideshow/carousel -->
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            
+                            
+                            <div class="wrapper">
+                            <div class="card front-face">
+                            <img src="https://i.imgur.com/PnQXMst.png">
+                            </div>
+                            <div class="card back-face">
+                                <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                                <div class="info">
+                                    <div class="title">
+                                        CodingLab</div>
+                                    <p>
+                                        User interface designer and <br>front-end developer</p>
+                                </div>
+                                <ul>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </ul>
+                            </div>
+                        </div>
+                              
+                              
+                              
+                              
+                            </div>
+                            <div class="carousel-item">
+                        
+                        
+                        
+                        <!-- flip card 1 -->
+                        <div class="wrapper">
+                            <div class="card front-face">
+                            <img src="https://i.imgur.com/dxSTOCs.png">
+                            </div>
+                            <div class="card back-face">
+                                <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                                <div class="info">
+                                    <div class="title">
+                                        CodingLab</div>
+                                    <p>
+                                        User interface designer and <br>front-end developer</p>
+                                </div>
+                                <ul>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </ul>
+                            </div>
+                        </div>
+                      <!-- flip card 1 - end -->
+          
+                        
+                        
+                        
+                        </div>
+                            <div class="carousel-item">
+                              
+                              
+                              <div class="wrapper">
+                            <div class="card front-face">
+                            <img src="https://media.istockphoto.com/id/1300205266/vector/smartphone-in-hand-with-audio-book-app-interface-on-its-screen-listen-literature-e-books-in.jpg?s=612x612&w=0&k=20&c=SLWcqjH2nIVMvNK51dnX31SEYIMxw4qwIK7TGjKlBQk=">
+                            </div>
+                            <div class="card back-face">
+                                <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                                <div class="info">
+                                    <div class="title">
+                                        CodingLab</div>
+                                    <p>
+                                        User interface designer and <br>front-end developer</p>
+                                </div>
+                                <ul>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </ul>
+                            </div>
+                        </div>
+                              
+                              
+                            </div>
+                          </div>
+                          
+                          <!-- Left and right controls/icons -->
+                          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                          </button>
+                        </div>
+                         <!-- Carousel end -->
+          
+                        
+          
+          
+          
+          
+          
+          
+                    </div>
+    
+    
+          
+                    <div class="col-lg-8 mt-1">
+
+
+                        <div class="col-md-12 mt-3" data-aos="zoom-out" data-aos-delay="600">
+                              <center>
+                                <div style="color:white;font-size: 35px;font-weight: 900;font-family: Verdana, Geneva, Tahoma, sans-serif; margin-bottom: -45px;">
+                                <!-- Best AudioBook Story! -->
+                                Tech Carnot Audiobook Adventure!
+                              </div>
+                            </center>
+                          </div>
+
+
+
+
+
+
+
+                        <div class="slider-wrap">
+                            <div id="card-slider" class="slider">
+                              <div class="slider-item">
+                                  <div class="animation-card_image">
+                                      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/audio-book-6742784-5580358.png?f=webp" alt="">
+                                  </div>
+                                  <div class="animation-card_content">
+                                      <h4 class="animation-card_content_title title-2">Potcast</h4>
+                                      <p class="animation-card_content_description p-2">With top notch content created whenever.</p>
+                                        <button class="btn btn-primary rounded-pill" type="button">
+                                            <img class="float-start scp_btn" src="https://png.pngtree.com/png-vector/20220519/ourmid/pngtree-media-playlist-icon-color-flat-png-image_4694415.png" width="30px" alt="">
+                                            <h6 class="float-start px-3 pt-2 scroll_btn">Potcast Playlist</h6>
+                                        </button>
+
+                                  </div>
+                              </div>
+                              <div class="slider-item">
+                                  <div class="animation-card_image">
+                                      <img src="https://static.vecteezy.com/system/resources/previews/017/217/147/original/audiobook-icon-3d-png.png" alt="">
+                                  </div>
+                                  <div class="animation-card_content">
+                                      <h4 class="animation-card_content_title title-2">COMMNS Audio Books</h4>
+                                      <p class="animation-card_content_description p-2">With no contractual commitments comes the freedom </p>
+                                      <button class="btn btn-primary rounded-pill" type="button">
+                                        <img class="float-start scp_btn" src="https://png.pngtree.com/png-vector/20220519/ourmid/pngtree-media-playlist-icon-color-flat-png-image_4694415.png" width="30px" alt="">
+                                        <h6 class="float-start px-3 pt-2 scroll_btn">Comms Skill Playlist</h6>
+                                    </button>
+                                  </div>
+                              </div>
+                              <div class="slider-item">
+                                  <div class="animation-card_image">
+                                      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/audio-book-6742784-5580358.png?f=webp" alt="">
+                                  </div>
+                                  <div class="animation-card_content">
+                                      <h4 class="animation-card_content_title title-2">Motivational Audio Books</h4>
+                                      <p class="animation-card_content_description p-2">With no contractual created whenever.</p>
+                                      <button class="btn btn-primary rounded-pill" type="button">
+                                        <img class="float-start scp_btn" src="https://png.pngtree.com/png-vector/20220519/ourmid/pngtree-media-playlist-icon-color-flat-png-image_4694415.png" width="30px" alt="">
+                                        <h6 class="float-start px-3 pt-2 scroll_btn">Motivational Playlist</h6>
+                                    </button>
+                                    </div>
+                              </div>
+                              <div class="slider-item">
+                                  <div class="animation-card_image">
+                                      <img src="https://static.vecteezy.com/system/resources/previews/017/217/147/original/audiobook-icon-3d-png.png" alt="">
+                                  </div>
+                                  <div class="animation-card_content">
+                                      <h4 class="animation-card_content_title title-2">Mind & Brain Audio Books</h4>
+                                      <p class="animation-card_content_description p-2">With no contractual top notch created whenever.</p>
+                                      <button class="btn btn-primary rounded-pill" type="button">
+                                        <img class="float-start scp_btn" src="https://png.pngtree.com/png-vector/20220519/ourmid/pngtree-media-playlist-icon-color-flat-png-image_4694415.png" width="30px" alt="">
+                                        <h6 class="float-start px-3 pt-2 scroll_btn">Mind & Brain Playlist</h6>
+                                    </button>
+                                    </div>
+                              </div>
+                              <div class="slider-item">
+                                  <div class="animation-card_image">
+                                      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/audio-book-6742784-5580358.png?f=webp" alt="">
+                                  </div>
+                                  <div class="animation-card_content">
+                                      <h4 class="animation-card_content_title title-2">Finance Audio Book</h4>
+                                      <p class="animation-card_content_description p-2">With no contractual commitments comes the freedom</p>
+                                      <button class="btn btn-primary rounded-pill" type="button">
+                                        <img class="float-start scp_btn" src="https://png.pngtree.com/png-vector/20220519/ourmid/pngtree-media-playlist-icon-color-flat-png-image_4694415.png" width="30px" alt="">
+                                        <h6 class="float-start px-3 pt-2 scroll_btn">Finance Playlist</h6>
+                                    </button>
+                                    </div>
+                              </div>
+                          </div>
+                          </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+                    </div>
+          
+                  </div> <!-- / row -->
+          
+     
+          
+              </section><!-- End Features Section -->
+
+    </div>
+
+
+
+
+    <nav class="right-sidebar">
+        <ul>
+            <li>
+                <a href="#"
+                    onclick="openPopup('pop-up-1', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                    <!-- <i class="fa fa-chalkboard-user fa-2x"></i> -->
+                    <i class="fa fa-2x"> <img src="https://i.imgur.com/hatPZvE.png" height="33px" alt=""> </i>
+
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    onclick="openPopup('pop-up-2', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                    <i class="fa fa-2x"> <img src="https://i.imgur.com/JRYLPQd.png" height="33px" alt=""> </i>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="#" onclick="openPopup('pop-up-3', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                  <i class="fa fa-2x"> <img src="https://i.imgur.com/ZmkLPU4.png" height="33px" alt=""> </i>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="openPopup('pop-up-4', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                  <i class="fa fa-2x"> <img src="https://i.imgur.com/cEJQQqw.png" height="33px" alt=""> </i>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="openPopup('pop-up-5', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                  <i class="fa fa-2x"> <img src="https://i.imgur.com/BNj4rH5.png" height="33px" alt=""> </i>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="#" onclick="openPopup('pop-up-6', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                  <i class="fa fa-2x"> <img src="https://i.imgur.com/lTT04rT.png" height="33px" alt=""> </i>
+                </a>
+            </li>
+
+
+            <li class="has-subnav">
+              <a href="#" onclick="openPopup('pop-up-7', 'file:///C:/xampp/htdocs/LMS/Potcast_audiobook.html')">
+                <i class="fa fa-2x"> <img src="https://i.imgur.com/Ec2GzGh.png" height="33px" alt=""> </i>
+              </a>
+          </li>
+
+
+
+
+
+
+
+
+
+        </ul>
+    </nav>
+
+    
+
+    <div id="popup-container">
+        <div id="popup-content">
+            <iframe id="popup-iframe" style="width: 100%; height: 100%; margin-top: 0px; border-radius: 5px;" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+    <nav class="main-menu" style="background-color: #052e6e;">
+        <ul>
+            <li style="padding-top:24px;padding-bottom:30px">
+                <a href="./techCarnot.html">
+                    
+                    <img src="techcarnot1.png" style="padding-left:7.5px;" height ="45px" alt="">
+                    <span class="nav-text">
+                        &nbsp;&nbsp;
+                        <img src="techcarnot2.png" height ="29px" alt="">
+                    </span>
+                </a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+            <li>
+                <a href="./techCarnot.html">
+                    
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="nav-text">
+                        Back
+                    </span>
+                </a>
+            </li>
+            <li>   
+                <a href="./codeEditor.html">
+                
+                    <i class="fa-solid">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/visual-studio-code-logo-black-and-white.png" width="20px" alt="">    
+                    </i>
+                    <span class="nav-text">
+                        Code Editor
+                    </span>
+                </a>
+    
+            </li>
+
+            <li class="has-subnav">
+                <a href="./electronicLab.html">
+                
+                    <i class="fa">
+                      <img src="https://cdn.freebiesupply.com/logos/large/2x/arduino-logo-black-and-white.png" width="20px" alt="">
+                    </i>
+                    <span class="nav-text">
+                        Electronic Lab
+
+                        <!-- Simulation Board -->
+                    </span>
+                </a>
+    
+            </li>
+
+            <li>
+                <a href="./audiobook.html">
+                    <i class="fa">
+                        <img src="https://www.nicepng.com/png/full/119-1199109_reversetune-com-audio-wave-white-icon-png.png" width="20px" alt="">
+                      </i>
+                    <span class="nav-text">
+                        AudioBook
+                    </span>
+                </a>
+    
+            </li>
+            <li>
+                <a href="./webDevelopment.html">
+                    <i class="fa fa-cogs fa-2x"></i>
+                    <!-- <i class="fa-solid fa-gear-complex-code"></i> -->
+                    <span class="nav-text">
+                        Web Development Tool
+                    </span>
+                </a>
+            </li>
+            
+            <li class="has-subnav">
+                <a href="./codeVisualisation.html">
+                    
+                    <!-- <i class="fa-light fa-screen-users"></i> -->
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span class="nav-text">
+                        Code Visulization
+                    </span>
+                </a>
+    
+            </li>
+    
+        </ul>
+    
+    </nav> 
+
+
+
+
+    <script>
+
+
+
+
+        // ----------------audio slider--------------------------
+        var cards = $('#card-slider .slider-item').toArray();
+
+startAnim(cards);
+
+function startAnim(array){
+    if(array.length >= 4 ) {
+        TweenMax.fromTo(array[0], 0.5, {x:0, y: 0, opacity:0.75}, {x:0, y: -120, opacity:0, zIndex: 0, delay:0.03, ease: Cubic.easeInOut, onComplete: sortArray(array)});
+
+        TweenMax.fromTo(array[1], 0.5, {x:45, y: 125, opacity:1, zIndex: 1}, {x:0, y: 0, opacity:0.75, zIndex: 0, boxShadow: '-5px 8px 8px 0 rgba(82,89,129,0.05)', ease: Cubic.easeInOut});
+
+        TweenMax.to(array[2], 0.5, {bezier:[{x:0, y:250}, {x:65, y:200}, {x:45, y:125}], boxShadow: '-5px 8px 8px 0 rgba(82,89,129,0.05)', zIndex: 1, opacity: 1, ease: Cubic.easeInOut});
+
+        TweenMax.fromTo(array[3], 0.5, {x:0, y:400, opacity: 0, zIndex: 0}, {x:0, y:250, opacity: 0.75, zIndex: 0, ease: Cubic.easeInOut}, );
+    } else {
+        $('#card-slider').append('<p>Sorry, carousel should contain more than 3 slides</p>')
+    }
+}
+
+function sortArray(array) {
+    clearTimeout(delay);
+    var delay = setTimeout(function(){
+        var firstElem = array.shift();
+        array.push(firstElem);
+        return startAnim(array); 
+    },3000)
+}
+
+
+
+
+
+
+    
+
+        // ----------------- SIdebar Icon -----------------------
+
+        function toggleCollapse() {
+            var asideBar = document.querySelector('.aside-bar');
+            asideBar.classList.toggle('collapsed');
+        }
+
+
+
+
+        // ----------------- Onclick Icons Right Bar --------------------   
+
+        function openPopup(popupId, srcUrl) {
+            const popupContainer = document.getElementById('popup-container');
+            const popupIframe = document.getElementById('popup-iframe');
+
+            popupIframe.src = srcUrl;
+            popupContainer.classList.add('show');
+        }
+
+        function closePopup() {
+            const popupContainer = document.getElementById('popup-container');
+            const popupIframe = document.getElementById('popup-iframe');
+
+            popupIframe.src = '';
+            popupContainer.classList.remove('show');
+        }
+
+        const popupContainer = document.getElementById('popup-container');
+        popupContainer.addEventListener('click', function (event) {
+            if (event.target === this) {
+                closePopup();
+            }
+        });
+
+
+
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

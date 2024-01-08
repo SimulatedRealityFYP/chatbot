@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css"
+        integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+               <!-- AI chat bot  -->
+       <link
+       rel="stylesheet"
+       href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <!-- AI chat bot end   -->
+
+    <!-- -------------- Style --------------------------- -->
+    <link rel="stylesheet" href="./techCarnot.css">
+
+    <style>
+
+*{
+    margin: 0px;
+    padding: 0px;
+}     
+
+.codeEditor{
+            width: 100%;
+            height: 69vh;
+        }
+
+        .codeEditor iframe{
+            width: 100%;
+            height: inherit;
+        }
+        
+    </style>
+
+
+
+
+<style>
+  
+  /*AI chat bot*/
+  #chat-circle {
+   background: #48a9ff;
+   position: fixed;
+   bottom: 12px;
+   right: 15px;
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   color: white;
+   padding: 0px;
+   cursor: pointer;
+   /* box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+   z-index: 1001;
+ }
+ 
+ .chat-box {
+   display: none;
+   position: fixed;
+   right: 6px;
+   bottom: 5px;
+   width: 350px;
+   max-width: 85vw;
+   max-height: 100vh;
+   border-radius: 25px;
+   box-shadow: 0px 3px 5px 2px #020a30bf;
+   z-index: 1500;
+ 
+ 
+ 
+   display: none;
+   position: fixed;
+   right: 6px;
+   bottom: 5px;
+   width: 400px;
+   max-width: 90vw;
+   max-height: 100vh;
+   border-radius: 25px;
+   box-shadow: 0px 3px 5px 2px #020a30bf;
+   z-index: 1500;
+ }
+ .chat-box-toggle {
+   float: right;
+   margin-right: 15px;
+   cursor: pointer;
+ }
+ .chat-box-header {
+   background: #48a9ff;
+   height: 60px;
+   border-top-left-radius: 25px;
+   border-top-right-radius: 25px;
+   color: white;
+   text-align: center;
+   font-size: 20px;
+   padding-top: 17px;
+ }
+ .chat-box-body {
+   position: relative;
+   height: 470px !important;
+   overflow: hidden;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+ }
+ 
+ @media only screen and (max-width: 767px) {
+   .chat-box {
+     width: 95%;
+     /* right: 24px; */
+     right: 9px;
+     bottom: 2px;
+     max-width: 100vw;
+   }
+   .chat-box-body {
+     height: 657px !important;
+   }
+   .chat-iframe {
+     height: 710px !important;
+   }
+ }
+ /*AI chat bot end*/
+ 
+ </style>
+
+
+
+
+
+
+
+
+
+<style>
+    .right-sidebar {
+    background: #052e6e;  
+    position: fixed;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    padding: 0;
+    top: 5rem;
+    height: 80%;
+    right: 5px;
+    width: 50px;
+    overflow: hidden;
+    z-index: 1000;
+    }
+
+    .section-bg {
+    background: linear-gradient(96deg, rgb(21 3 57) 0%, rgb(18 8 59) 45%, rgb(20 8 69) 100%);
+    width: 100%;
+    height: 90vh;
+    }
+    .right-sidebar {
+    background: #052e6e;
+    }
+    .main-menu {
+    background: #052e6e;
+    }
+    .borderNavbar{
+    background: #052e6e; 
+    }
+
+    /* main menu */
+
+    .main-menu {
+background:#2162C6;
+position:fixed;
+border-top-right-radius: 3rem;
+border-bottom-right-radius: 3rem;
+padding: 0;
+bottom:31px;
+height:92%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width 0.2s linear;
+transition:width 0.2s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+
+
+
+
+
+.accordion-header {
+    background: linear-gradient(45deg, #301d89, #430b4a);
+    color: white;
+    /* padding: 10px; */
+    border-radius: 40px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding-top: 1px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+
+</style>
+
+
+
+<style>
+    .filterable-div {
+      /* display: block; */
+      /* margin: 10px; */
+      color: white;
+    background: transparent;
+    border: none;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+
+
+
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
+/* * {
+  -webkit-font-smoothing: antialiased;
+  color: #acbdce;
+} */
+
+:root {
+  --border-radius: 10px;
+}
+
+.CardInner {
+  padding: 0px 16px;
+  background-color: #c9d2e0;
+  border-radius: var(--border-radius);
+}
+
+.container_Search {
+  display: flex;
+}
+
+.Icon {
+  min-width: 46px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  margin-right: 12px;
+  box-shadow: 
+    -2px -2px 6px rgba(#bab9b9, .6),
+    2px 2px 12px #384653;
+    
+  svg {
+    transform: translate(-1px, -1px);    
+  }
+}
+
+
+.InputContainer {
+  width: 100%;
+}
+
+input {
+  background-color: #e3edf7;
+  padding: 16px 32px;
+  border: none;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: #a9b8c9;
+  -webkit-appearance: none;
+  transition: all 240ms ease-out;
+  width: 100%;
+  border-radius: 10px;
+  
+  &::placeholder {
+    color: #6d7f8f;
+  }
+  
+  &:focus {
+    outline: none;
+    color: #6d7f8f;
+    background-color: lighten(#e3edf7, 3%);
+  }
+};
+  
+.InputContainer {
+  --top-shadow: inset 1px 1px 3px #c5d4e3, inset 2px 2px 6px #c5d4e3;
+  --bottom-shadow: inset -2px -2px 4px rgba(255,255,255, .7);
+  
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  
+  &:before,
+  &:after {
+    left: 0;
+    top: 0;
+    display: block;
+    content: "";
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  
+  &:before {
+    box-shadow: var(--bottom-shadow);
+  }
+  
+  &:after {
+    box-shadow: var(--top-shadow);
+  }
+}
+</style>
+
+
+
+</head>
+
+
+<body class="section-bg"> 
+
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+
+
+          <div class="col-sm-7">
+            <center>
+              <div style="color:white;font-size: 33px;font-weight: 900;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                Simulate & Visulize Your Code Here!
+                <p class="mt-0" style="font-size: 17.7px;font-weight: 400;color:rgb(5, 145, 170);">Start visualizing code to enhance your programming skills with Tech Carnot</p>
+            </div>
+          </center>
+     
+          </div>
+
+
+
+            <div class="col-sm-5 mt-2">
+ 
+              
+                  <!-- <input type="text" id="search" placeholder="Search" /> -->
+
+
+                  
+                    <div class="CardInner">
+                    <div class="container_Search">
+                      <div class="Icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                      </div>
+                      <div class="InputContainer">
+                        <input id="search" placeholder="Visual and analysis code ..."/>
+                      </div>
+                    </div>
+                   </div>
+           
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-sm-12 accordian-container">
+                <div class="accordion-container" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="filterable-div" data-filter="printing 1-5 using for loop and increment loop by 1" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" 
+                            onclick="accordionClick('#collapseOneiframe', 'https://paiza.io/projects/e/yW_CZ0aBMp-y4qUi83FX6A?theme=tomorrow_night_blue','https://docs.google.com/presentation/d/e/2PACX-1vQMAH2IJXsBTJ3vnT5T1SzufK8xiDRI9ulHcIxkCei1fq3_fnAnVbYEFO3lJM7fbg/embed?start=false&loop=true&delayms=3000')">
+                            printing 1-5 using for loop and increment loop by 1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-10 col-md-12 col-lg-12 codeEditor" id="collapseOneiframe">
+                                    
+                                    </div>       
+                                </div>
+                               </div>
+                          <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="filterable-div" data-filter="Bubble sort algorithm" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" 
+                            onclick="accordionClick('#collapseTwoiframe','https://paiza.io/projects/e/yW_CZ0aBMp-y4qUi83FX6A?theme=tomorrow_night_blue','https://docs.google.com/presentation/d/e/2PACX-1vQMAH2IJXsBTJ3vnT5T1SzufK8xiDRI9ulHcIxkCei1fq3_fnAnVbYEFO3lJM7fbg/embed?start=false&loop=true&delayms=3000')">
+                            Bubble Sort Algorithm
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-10 col-md-12 col-lg-12 codeEditor" id="collapseTwoiframe">
+                                    
+                                    </div>       
+                                </div>
+                               </div>
+                          <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="filterable-div" data-filter="Binary Search Algorithm" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" 
+                        onclick="accordionClick('#collapseThreeiframe','https://paiza.io/projects/e/yW_CZ0aBMp-y4qUi83FX6A?theme=tomorrow_night_blue','https://docs.google.com/presentation/d/e/2PACX-1vQMAH2IJXsBTJ3vnT5T1SzufK8xiDRI9ulHcIxkCei1fq3_fnAnVbYEFO3lJM7fbg/embed?start=false&loop=true&delayms=3000')">
+                          Binary Search Algorithm
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-10 col-md-12 col-lg-12 codeEditor" id="collapseThreeiframe">                                   
+                                    </div>       
+                                </div>
+                               </div>
+                          <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <nav class="main-menu" style="background-color: #052e6e;">
+      <ul>
+          <li style="padding-top:24px;padding-bottom:30px">
+              <a href="./techCarnot.html">
+                  
+                  <img src="techcarnot1.png" style="padding-left:7.5px;" height ="45px" alt="">
+                  <span class="nav-text">
+                      &nbsp;&nbsp;
+                      <img src="techcarnot2.png" height ="29px" alt="">
+                  </span>
+              </a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+          <li>
+              <a href="./techCarnot.html">
+                  
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <span class="nav-text">
+                      Back
+                  </span>
+              </a>
+          </li>
+          <li>   
+              <a href="./codeEditor.html">
+              
+                  <i class="fa-solid">
+                      <img src="https://cdn.freebiesupply.com/logos/large/2x/visual-studio-code-logo-black-and-white.png" width="20px" alt="">    
+                  </i>
+                  <span class="nav-text">
+                      Code Editor
+                  </span>
+              </a>
+  
+          </li>
+
+          <li class="has-subnav">
+              <a href="./electronicLab.html">
+              
+                  <i class="fa">
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/arduino-logo-black-and-white.png" width="20px" alt="">
+                  </i>
+                  <span class="nav-text">
+                      Electronic Lab
+
+                      <!-- Simulation Board -->
+                  </span>
+              </a>
+  
+          </li>
+
+          <li>
+              <a href="./audiobook.html">
+                  <i class="fa">
+                      <img src="https://www.nicepng.com/png/full/119-1199109_reversetune-com-audio-wave-white-icon-png.png" width="20px" alt="">
+                    </i>
+                  <span class="nav-text">
+                      AudioBook
+                  </span>
+              </a>
+  
+          </li>
+          <li>
+              <a href="./webDevelopment.html">
+                  <i class="fa fa-cogs fa-2x"></i>
+                  <!-- <i class="fa-solid fa-gear-complex-code"></i> -->
+                  <span class="nav-text">
+                      Web Development Tool
+                  </span>
+              </a>
+          </li>
+          
+          <li class="has-subnav">
+              <a href="./codeVisualisation.html">
+                  
+                  <!-- <i class="fa-light fa-screen-users"></i> -->
+                  <i class="fa-solid fa-laptop-code"></i>
+                  <span class="nav-text">
+                      Code Visulization
+                  </span>
+              </a>
+  
+          </li>
+  
+      </ul>
+  
+  </nav> 
+    
+<script>
+// let accordionClick = (id, src) => {
+//     console.log("jdfjkdhfdjkhfjkd");
+//     console.log(id);
+//     console.log(src);
+//     document.querySelector(id).innerHTML = `<iframe src="${src}" frameborder="0"></iframe>`;
+
+// };
+
+
+
+// // Add a function to handle accordion item click.
+// function accordionClick(id, code_src) {
+//   // Update the content of the clicked accordion item.
+//   document.querySelector(id).innerHTML = `<iframe src="${code_src}" frameborder="0"></iframe>`;
+
+//   // Move the clicked accordion item to the top.
+//   const accordionItem = document.querySelector(id).closest('.accordion-item');
+//   const accordionContainer = document.querySelector('.accordion-container');
+//   accordionContainer.prepend(accordionItem);
+// }
+
+
+
+
+
+// Add a function to handle accordion item click.
+function accordionClick(id, code_src,slide_src) {
+  // Update the content of the clicked accordion item.
+  document.querySelector(id).innerHTML = `<div class="row" style="overflow:hidden">
+                                        <div class="col-sm-5" style="margin-top: -47px;">
+                                          <iframe style="height: 567px;width: 105%;margin-bottom: -40px;" src="${code_src}" frameborder="0"></iframe>
+                                        </div>
+                                        <div class="col-sm-7">
+                                          <iframe style="height: 521px;width: 100%;margin-bottom: -87px;" src="${slide_src}" frameborder="0"></iframe>
+                                          
+                                        </div>
+                                      </div>`;
+
+  // Move the clicked accordion item to the top.
+  const accordionItem = document.querySelector(id).closest('.accordion-item');
+  const accordionContainer = document.querySelector('.accordion-container');
+  accordionContainer.prepend(accordionItem);
+}
+
+</script>
+
+<script>
+   function toggleAccordion(accordionId) {
+      var accordionContent = document.getElementById(accordionId);
+      if (accordionContent.style.display === 'none') {
+        accordionContent.style.display = 'block';
+      } else {
+        accordionContent.style.display = 'none';
+      }
+    }    
+        
+</script>
+
+<!-- script for search filter -->
+<script>
+    document.getElementById("search").addEventListener("input", function () {
+      const filterValue = this.value.toLowerCase();
+      const divs = document.getElementsByClassName("filterable-div");
+
+      for (let i = 0; i < divs.length; i++) {
+        const div = divs[i];
+        const dataFilter = div.getAttribute("data-filter").toLowerCase();
+
+        if (dataFilter.includes(filterValue)) {
+          div.classList.remove("hidden");
+        } else {
+          div.classList.add("hidden");
+        }
+      }
+    });
+  </script>
+  <!-- script for search filter - end -->
+
+  <div id="chat-circle" class="btn btn-raised">
+    <i class="material-icons">
+      <img
+        src="https://cdn3d.iconscout.com/3d/premium/thumb/chatbot-8113743-6497271.png"
+        width="55px"
+        alt=""
+      />
+    </i>
+  </div>
+  
+  
+  <div class="chat-box">
+    <div class="chat-box-header">
+      <!-- <img height="30px" src="assets/img/chat-logo.png" alt=""> -->
+      <img height="23px" src="https://i.imgur.com/MQy8c8M.png" alt="" />
+      <!-- <p><center>Simulation Board Assistant</center></p> -->
+      <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+    </div>
+    <div class="chat-box-body">
+      <div>
+        
+        <style>
+          .chat-iframe{
+            @media only screen and (max-width: 600px) {
+            width: 106% !important;
+            }
+          }
+        </style>
+        <iframe
+          class="chat-iframe"
+          style="
+            margin-left: -8px;
+            margin-top: -50px;
+            position: bottom;
+            height: 570px;
+            width: 114.5%;
+          "
+          src="https://app.humata.ai/ask/file/d6c3d89d-62f7-4179-92b7-2f331bd1ade6?share_link=41690a2d-74d2-4df1-8b38-248aaac6e493"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(function () {
+      $("#chat-circle").click(function () {
+        $("#chat-circle").toggle("scale");
+        $(".chat-box").toggle("scale");
+      });
+  
+      $(".chat-box-toggle").click(function () {
+        $("#chat-circle").toggle("scale");
+        $(".chat-box").toggle("scale");
+      });
+    });
+  </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
