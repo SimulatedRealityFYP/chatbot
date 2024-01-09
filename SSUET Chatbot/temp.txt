@@ -1,0 +1,415 @@
+/* @media (max-width: 768px) {
+          iframe {
+            height: 100%;
+            width: 100%;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+          } 
+        }*/
+        /* smartphones, iPhone, portrait 480x320 phones */
+    @media (min-width:320px) { 
+      iframe {
+    height: 119%;
+    width: 108.4%;
+    margin-top: -49px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+      }
+      @media (min-width:320px) and (orientation: portrait)  { 
+      iframe {
+        height: 103%;
+    width: 109.4%;
+    margin-top: -4.3em;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+      }
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @media (min-width:481px)  { 
+      button.chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+      }
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @media (min-width:641px)  { 
+      button.chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        iframe {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 95%;
+    width: 188%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 1px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+      }
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @media (min-width:961px)  { 
+      button.chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+      }
+    /* big landscape tablets, laptops, and desktops */
+    @media (min-width:1025px) { 
+      button.chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+      }
+    /* hi-res laptops and desktops */
+    @media (min-width:1281px) { 
+      button.chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        iframe{
+          overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 120%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 1px;
+    margin-right: 0px;
+    margin-left: 0px;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For Desktop View */
+      /* @media screen and (min-width: 1024px) {
+          .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: 527px!important;483px
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}*/
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px) 
+    and (max-device-width: 1024px) {
+      .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) 
+    and (orientation: portrait) {
+      .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) 
+    and (orientation: landscape) {
+      .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen
+    and (max-device-width: 640px) {
+.chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+      .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}
+ 
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) 
+    and (device-width: 320px) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+      .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) 
+    and (min-device-width: 375px) 
+    and (-webkit-min-device-pixel-ratio: 3) {
+      .chatbot-toggler {
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999!important;
+        }
+        .chatbot {
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          border-radius: 0;
+          width: 100%;
+        }
+        .chatbot .chatbox {
+          height: 100%;
+          padding: 0;
+        }
+        .chatbot .chat-input {
+          padding: 5px 15px;
+        }
+        .chatbot header span {
+          display: block;
+        }
+        .side_padding {
+    height: /*483px*/527px!important;
+    z-index: 1499!important;
+    margin-top: 0!important;
+    padding: 22.8px!important;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+}

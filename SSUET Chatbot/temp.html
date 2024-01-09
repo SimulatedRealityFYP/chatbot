@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    body {
+      background: #CC95C0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #654ea3, #eaafc8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .buttonContainer .modifiedButton {
+      flex-basis: 100%;
+    }
+
+    .buttonContainer .modifiedButton:nth-of-type(4),
+    .buttonContainer .modifiedButton:nth-of-type(5) {
+      flex-basis: 50%;
+    }
+
+    .modifiedButton{
+      background: linear-gradient(to right, #654ea3, #eaafc8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  align-self: center;
+  /*padding: 20px 100px 18px 100px;*/
+  padding: 20px 0;
+  margin: 2px 0;
+  color: white;
+  font-family: arial;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  /*background: rgb(255, 85, 85);*/
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.modifiedButton:hover{
+ background: #E03A3A;
+}
+
+.modifiedButton:active{
+  transform: scale(1.025);
+}
+  </style>
+  <div class="buttonContainer">
+    <button id="admissionButton" class="modifiedButton">Admission</button>
+    <button id="contacting_ssuetButton" class="modifiedButton">contacting_ssuet</button>
+    <button id="financeButton" class="modifiedButton">Finance</button>
+    <button id="libraryButton" class="modifiedButton"><img src="library-svgrepo-com.svg" alt="librarysvg" style="height: 2rem; width: 2rem; float: left; padding-left: 5px;" />Library</button>
+    <button id="DSAButton" class="modifiedButton">DSA</button>
+    <button id="sportButton" class="modifiedButton">Sport</button>
+    <button id="careerButton" class="modifiedButton">Career recommendation</button>
+
+  </div>
+  
+    <script>
+      // Get the button element by its ID
+      const admissionButton = document.getElementById('admissionButton');
+  
+      // Add a click event listener to the button
+      admissionButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './Admission.html';
+      });
+      const contacting_ssuetButton = document.getElementById('contacting_ssuetButton');
+  
+      // Add a click event listener to the button
+      contacting_ssuetButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './contacting_ssuet.html';
+      });
+      const financeButton = document.getElementById('financeButton');
+  
+      // Add a click event listener to the button
+      financeButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './finance.html';
+      });
+      const libraryButton = document.getElementById('libraryButton');
+  
+      // Add a click event listener to the button
+      libraryButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './library.html';
+      });
+      const DSAButton = document.getElementById('DSAButton');
+  
+      // Add a click event listener to the button
+      DSAButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './DSA.html';
+      });
+      const sportButton = document.getElementById('sportButton');
+  
+      // Add a click event listener to the button
+      sportButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './sport.html';
+      });
+      const careerButton = document.getElementById('careerButton');
+  
+      // Add a click event listener to the button
+      careerButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = './career.html';
+      });
+    </script>
+  </body>
+</html>
