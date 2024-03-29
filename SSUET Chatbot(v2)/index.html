@@ -146,7 +146,7 @@
         visibility: visible;
       }
 /* Extra small devices (phones, up to 480px) */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .chatbot-toggler {
           right: 20px;
           bottom: 20px;
@@ -202,7 +202,8 @@
         height: 572px;
       }
       .side_padding{
-        height: 442px;
+        height: 446px;
+        padding: 22.4px;
       }
 }
       /* @media (max-device-width: 640px) {
@@ -357,9 +358,6 @@
           margin-left: -41px;
       } */
 
-      chatbot_iframe{
-        z-index: 1500;
-      }
       body{
           margin: 0;
           padding: 0;
