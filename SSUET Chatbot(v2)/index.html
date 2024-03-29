@@ -145,113 +145,67 @@
       .chat-input textarea:valid ~ span {
         visibility: visible;
       }
-      iframe {
-        height: 100%;
-        margin-top: -3.1rem;
-        width: 100%;
-      }
-/* Extra small devices (phones, up to 480px) */
-      @media screen and (max-width: 767px) {
-        .chatbot-toggler {
+      /* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 480px) {
+  .chatbot-toggler {
           right: 20px;
           bottom: 20px;
         }
         .chatbot {
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 0;
-        }
-        .side_padding {
-          height: 75vh;
-          padding: 1.4rem;
-        }
-        iframe {
-          width: 100vw;
-          height: 90vh;
-        }
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
       }
-      @media screen and (min-width: 480px) and (max-height: 767px) and (orientation: Landscape) {
-        .chatbot-toggler {
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .chatbot-toggler {
           right: 20px;
           bottom: 20px;
         }
         .chatbot {
-          right: 0;
-          bottom: 0;
-          width: 100vw;
-          height: 100vh;
-          border-radius: 0;
-        }
-        .side_padding {
-          height: 49vh;
-          padding: 1.4rem;
-        }
-        iframe {
-          width: 80vw;
-          height: 80vh;
-        }
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
       }
-      /* Small devices (tablets, 768px and up) */
-      @media (min-width: 768px) and (max-width: 991px) {
-        .chatbot-toggler {
-          right: 20px;
-          bottom: 20px;
-        }
-        .chatbot {
-          right: 0;
-          bottom: 0;
-          width: 100vw;
-          height: 100vh;
-          border-radius: 0;
-        }
-        iframe {
-          width: 206vw;
-          height: 107.3vh;
-          margin: 0;
-        }
-      }
-      /* tablets/desktops and up ———– */
-      @media (min-width: 992px) and (max-width: 1199px) {
-        .chatbot-toggler {
+}
+/* tablets/desktops and up ———– */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .chatbot-toggler{
           bottom: 30px;
-          right: 35px;
-        }
-        .chatbot {
-          right: 35px;
-          bottom: 90px;
-          width: 36vw;
-          height: 83vh;
-        }
-        .side_padding {
-          height: 340px;
-        }
-        iframe {
-          width: 108vw;
-          height: 100.3vh;
-        }
+        right: 35px;
       }
-      /* large desktops and up ———– */
-      @media screen and (min-width: 1200px) {
-        .chatbot-toggler {
-          bottom: 30px;
-          right: 35px;
-        }
         .chatbot {
-          right: 35px;
-          bottom: 90px;
-          width: 420px;
-          height: 572px;
-        }
-        .side_padding {
-          height: 442px;
-        }
-        iframe {
-          width: 108vw;
-          height: 115vh;
-        }
-      }      /* @media (max-device-width: 640px) {
+        right: 35px;
+        bottom: 90px;
+        width: 36vw;
+    height: 83vh;
+      }
+      .side_padding{
+        height: 340px;
+      }
+}
+/* large desktops and up ———– */
+@media screen and (min-width: 1200px) {
+  .chatbot-toggler{
+          bottom: 30px;
+        right: 35px;
+      }
+        .chatbot {
+        right: 35px;
+        bottom: 90px;
+        width: 420px;
+        height: 572px;
+      }
+      .side_padding{
+        height: 446px;
+        padding: 22.4px;
+      }
+}      /* @media (max-device-width: 640px) {
         .chatbot-toggler {
           right: 20px;
           bottom: 20px;
